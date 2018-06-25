@@ -1,0 +1,63 @@
+.CommandLine {
+  display: flex;
+  position: relative;
+  padding: 10px 20px;
+}
+
+.CommandLine__timestamp {
+  display: inline-block;
+}
+
+.CommandLine__input-wrap {
+  position: relative;
+  flex: 1;
+}
+
+.CommandLine__input {
+  display: block;
+  outline: 0;
+  width: 100%;
+  background-color: transparent;
+  color: green;
+  line-height: 24px;
+  font-family: monospace;
+  font-size: 20px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+  caret-color: transparent;
+}
+
+.CommandLine__caret {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 1;
+  width: 12px;
+  height: 24px;
+  border: 1px solid green;
+  box-sizing: border-box;
+}
+
+.CommandLine__caret--is-focus {
+  background-color: green;
+}
+
+.CommandLine__output {
+  position: absolute;
+  top: -999;
+  opacity: 0;
+  background-color: white;
+  line-height: 24px;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+@keyframes blink {
+  40% { opacity: 1; }
+  50% { opacity: 0; }
+  60% { opacity: 1; }
+}
