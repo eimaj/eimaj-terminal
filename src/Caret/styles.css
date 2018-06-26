@@ -1,0 +1,22 @@
+.Caret {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 1;
+  width: 12px;
+  height: 24px;
+  border: 1px solid green;
+  box-sizing: border-box;
+}
+
+.Caret--is-focus {
+  background-color: green;
+}
+
+@keyframes blink {
+  40% { opacity: 1; }
+  50% { opacity: 0; }
+  60% { opacity: 1; }
+}

@@ -46,7 +46,7 @@
   background-color: green;
 }
 
-.CommandLine__output {
+.CommandLine__shadow {
   position: absolute;
   top: -999;
   opacity: 0;
