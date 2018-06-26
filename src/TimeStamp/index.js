@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
 import './styles.css';
 
 const TimeStamp = ({ dateTime }) => (
-  <div className="Timestamp">
+  <span className="Timestamp">
     <Moment dateTime={dateTime} format="HH:mm" />
     &nbsp;eimaj:cli&nbsp;
-  </div>
+  </span>
 );
 
 TimeStamp.propTypes = {

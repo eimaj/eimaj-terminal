@@ -1,7 +1,7 @@
 .CommandLine {
   display: flex;
   position: relative;
-  padding: 10px 20px;
+  padding: 4px 20px;
 }
 
 .CommandLine__timestamp {

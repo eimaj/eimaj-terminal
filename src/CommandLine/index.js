@@ -7,16 +7,16 @@ import TimeStamp from '../TimeStamp/index';
 import './styles.css';
 
 class CommandLine extends Component {
+  static propTypes = {
+    recordHistory: PropTypes.func,
+  };
+
   state = {
     isCaretVisible: true,
     inputValue: '',
     caretValue: '',
     caretPosition: 0,
     isFocus: false,
-  };
-
-  propTypes = {
-    recordHistory: PropTypes.func,
   };
 
   componentDidMount() {
