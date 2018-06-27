@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Caret from '../Caret/index';
-import TimeStamp from '../TimeStamp/index';
+import Caret from './Caret';
+import TimeStamp from './TimeStamp';
 
-import './styles.css';
+import '../styles/CommandLine.css';
 
 class CommandLine extends Component {
   static propTypes = {
@@ -12,17 +12,13 @@ class CommandLine extends Component {
   };
 
   state = {
-    isCaretVisible: true,
-    inputValue: '',
-    caretValue: '',
     caretPosition: 0,
+    caretValue: '',
+    dateTime: new Date(),
+    inputValue: '',
+    isCaretVisible: true,
     isFocus: false,
   };
-
-  componentDidMount() {
-    const dateTime = new Date();
-    return this.setState({ dateTime });
-  }
 
   setCaretPosition = () => {
     const caretPosition = this.shadowNode.offsetWidth;
@@ -38,10 +34,13 @@ class CommandLine extends Component {
   };
 
   clearInputValueAndCaret = () => {
+    const dateTime = new Date();
+
     return this.setState({
       inputValue: '',
       caretPosition: 0,
       caretValue: '',
+      dateTime,
     });
   };
 

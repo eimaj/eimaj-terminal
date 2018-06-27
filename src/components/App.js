@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import CommandLine from '../CommandLine/index';
-import History from '../History/index';
+import CommandLine from './CommandLine';
+import History from './History';
 
-import './styles.css';
+import '../styles/App.css';
 
 class App extends Component {
   state = {

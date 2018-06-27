@@ -1,13 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TimeStamp from '../TimeStamp/index';
+import TimeStamp from './TimeStamp';
 
-import './Item.css';
+import '../styles/HistoryItem.css';
 
 const Item = ({ item }) => {
-  console.warn('Item');
-  console.log(item);
-
   return (
     <li className="Item">
       <p className="Item__command-wrap">

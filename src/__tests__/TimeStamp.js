@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import TimeStamp from '../components/TimeStamp';
+
+const fakeDateTime = new Date();
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+  ReactDOM.render(<TimeStamp dateTime={fakeDateTime} />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
