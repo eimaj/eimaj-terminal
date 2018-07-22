@@ -1,0 +1,11 @@
+.Terminal {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100%;
+  background-color: black;
+  color: whitesmoke;
+  line-height: 24px;
+  font-family: monospace;
+  font-size: 20px;
+}
