@@ -15,10 +15,16 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <History history={this.state.history} />
-        <CommandLine recordHistory={this.recordHistory}/>
-      </div>
+      <SplitPane
+        className="App"
+        split="horizontal"
+        minSize={10}
+        maxSize={-24}
+        defaultSize={100}
+      >
+        <Content content={this.state.markdownContent} />
+        <Terminal setContent={this.setContent} />
+      </SplitPane>
     );
   }
 }
