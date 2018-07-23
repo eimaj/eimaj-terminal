@@ -8,7 +8,7 @@ import '../styles/CommandLine.css';
 
 class CommandLine extends Component {
   static propTypes = {
-    recordHistory: PropTypes.func,
+    executeCommand: PropTypes.func.isRequired,
   };
 
   state = {
@@ -52,7 +52,7 @@ class CommandLine extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    this.props.recordHistory(this.state.inputValue);
+    this.props.executeCommand(this.state.inputValue);
     return this.clearInputValueAndCaret();
   };
 
