@@ -9,12 +9,6 @@ class App extends Component {
   state = {
   };
 
-  recordHistory = (command) => {
-    const history = [...this.state.history];
-    const dateTime = new Date();
-
-    history.push({ command, result: 'result', dateTime });
-    return this.setState({ history });
   setContent = (markdownContent) => {
     return this.setState({ markdownContent });
   };
