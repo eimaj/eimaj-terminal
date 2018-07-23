@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import SplitPane from 'react-split-pane';
+import Content from './Content';
+import Terminal from './Terminal';
 
 import '../styles/App.css';
 
