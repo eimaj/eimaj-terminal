@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
-import CommandLine from './CommandLine';
-import History from './History';
 
 import '../styles/App.css';
 
 class App extends Component {
   state = {
-    history: [],
   };
 
   recordHistory = (command) => {
@@ -15,6 +12,8 @@ class App extends Component {
 
     history.push({ command, result: 'result', dateTime });
     return this.setState({ history });
+  setContent = (markdownContent) => {
+    return this.setState({ markdownContent });
   };
 
   render() {
