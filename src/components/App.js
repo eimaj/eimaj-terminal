@@ -16,16 +16,22 @@ class App extends Component {
 
   render() {
     return (
-      <SplitPane
-        className="App"
-        split="horizontal"
-        minSize={10}
-        maxSize={-24}
-        defaultSize={100}
+      <div
+        style={{ height: '100vh' }}
+        ref={node => (this.splitPanelNode = node)}
       >
-        <Content content={this.state.markdownContent} />
-        <Terminal setContent={this.setContent} />
-      </SplitPane>
+        <SplitPane
+          className="App"
+          split="horizontal"
+          minSize={10}
+          maxSize={-24}
+          size={this.state.currentSize}
+        >
+          <Content page={this.state.markdownPage} />
+          <Terminal setPage={this.setPage} />
+        </SplitPane>
+
+      </div>
     );
   }
 }
