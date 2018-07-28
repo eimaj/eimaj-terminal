@@ -1,0 +1,62 @@
+.ResizeToggle {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 10;
+}
+
+.ResizeToggle__link {
+  position: relative;
+  display: inline-block;
+  margin-left: 4px;
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 0;
+  background-color: white;
+}
+
+.ResizeToggle__link--minimize {
+  transform: rotate(180deg);
+}
+
+.ResizeToggle__icon {
+  position: absolute;
+  top: 16px;
+  left: 10px;
+  font-size: 0;
+  height: 2px;
+  width: 10px;
+  z-index: 10;
+}
+
+.ResizeToggle__icon::before,
+.ResizeToggle__icon::after {
+  position: absolute;
+  display: block;
+  width: 9px;
+  height: 100%;
+  background-color: black;
+  content: '';
+}
+
+.ResizeToggle__icon::before {
+  bottom: 0;
+  transform: rotate(-45deg);
+  transform-origin: bottom left;
+  left: 0;
+}
+
+.ResizeToggle__icon::after {
+  bottom: 0;
+  transform: rotate(45deg);
+  transform-origin: bottom right;
+  right: 0;
+}
+
+.ResizeToggle__icon--maximize {
+}
+
+.ResizeToggle__icon--minimize {
+}
