@@ -1,2 +1,40 @@
 .Content {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.Content__box {
+  position: relative;
+  left: -1px;
+  margin: 0 auto 40px;
+  box-sizing: border-box;
+  padding: 60px 40px 30px;
+  min-width: 280px;
+  max-width: 439px;
+  width: calc(100% - 80px);
+  background-color: white;
+  text-align: center;
+}
+
+.Content__box--wide {
+  min-width: 280px;
+  max-width: 801px;
+  text-align: left;
+}
+
+.Content__box--wide h2 {
+  padding-top: 20px;
+  border-bottom: 1px solid rgba(194,194,194,1);
+}
+
+.Content__box img {
+  box-sizing: border-box;
+  margin: 20px auto;
+  border: 5px solid rgb(137,201,250);
+  max-width: 100%;
+}
+
+.Content__box--wide .Content__icons {
+  padding: 0 0 30px;
 }

@@ -1,7 +1,126 @@
+@import 'http://fonts.googleapis.com/css?family=Lato:300,400,700';
+
 body {
   margin: 0;
-  padding: 0;
+  background-color: $smoke;
+  background-image: url('../images/bg.png');
+  background-position: center -41px;
 }
 
 #root {
+}
+
+html,
+body {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.6;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(137,201,250);
+
+}
+
+a:hover {
+  text-decoration: underline;
+  color: darken(rgb(137,201,250), 10%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, serif;
+  font-weight: 300;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 28px;
+  text-align: center;
+}
+
+h2 {
+  padding-bottom: 6px;
+  border-bottom: 2px solid $smoke;
+  margin: 0 0 20px;
+  font-size: 24px;
+}
+
+h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h4 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-style: italic;
+}
+
+p,
+li {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+ul {
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin: 0 10px;
+  padding: 0;
+}
+
+li:before {
+  content: '◆';
+  padding-right: 10px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+small {
+  font-size: 80%;
+}
+
+strong {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, serif;
+  font-weight: 700;
+}
+
+em {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.bordered::after {
+  border-bottom: 1px solid rgb(137,201,250);
+}
+
+hr {
+  margin: 0 auto;
+  padding: 10px 0 24px;
+  border: 0;
+}
+
+hr:before {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  border-top: 1px dashed rgba(194,194,194,1);
+  width: 30px;
+  content: '';
 }

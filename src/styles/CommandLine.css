@@ -18,10 +18,10 @@
   outline: 0;
   width: 100%;
   background-color: transparent;
-  color: green;
+  color: rgb(60, 179, 113);
   line-height: 24px;
   font-family: monospace;
-  font-size: 20px;
+  font-size: 18px;
   border: 0;
   padding: 0;
   margin: 0;
@@ -33,35 +33,9 @@
   }
 }
 
-.CommandLine__caret {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  opacity: 1;
-  width: 12px;
-  height: 24px;
-  border: 1px solid green;
-  box-sizing: border-box;
-}
-
-.CommandLine__caret--is-focus {
-  background-color: green;
-}
-
 .CommandLine__shadow {
   position: absolute;
   top: -999;
   opacity: 0;
   background-color: white;
-  line-height: 24px;
-  font-family: monospace;
-  font-size: 20px;
-}
-
-@keyframes blink {
-  40% { opacity: 1; }
-  50% { opacity: 0; }
-  60% { opacity: 1; }
 }

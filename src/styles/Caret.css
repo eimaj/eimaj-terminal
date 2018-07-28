@@ -7,12 +7,12 @@
   opacity: 1;
   width: 12px;
   height: 24px;
-  border: 1px solid green;
+  border: 1px solid rgb(60, 179, 113);
   box-sizing: border-box;
 }
 
 .Caret--is-focus {
-  background-color: green;
+  background-color: rgb(60, 179, 113);
 }
 
 @keyframes blink {
