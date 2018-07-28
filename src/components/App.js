@@ -7,7 +7,7 @@ import '../styles/App.css';
 
 class App extends Component {
   state = {
-    markdownContent: 'lorem',
+    markdownPage: 'home',
   };
 
   setContent = (markdownContent) => {
