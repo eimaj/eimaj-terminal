@@ -10,8 +10,8 @@ class App extends Component {
     markdownPage: 'home',
   };
 
-  setContent = (markdownContent) => {
-    return this.setState({ markdownContent });
+  setPage = (markdownPage) => {
+    return this.setState({ markdownPage });
   };
 
   render() {
