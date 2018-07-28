@@ -25,13 +25,20 @@
 
 .Content__box--wide h2 {
   padding-top: 20px;
-  border-bottom: 1px solid rgba(194,194,194,1);
+  border-bottom: 1px solid rgba(194, 194, 194, 1);
+}
+
+.Content__box--wide li::before {
+  content: '◆';
+  padding-right: 10px;
+  font-size: 14px;
+  line-height: 1.8;
 }
 
 .Content__box img {
   box-sizing: border-box;
   margin: 20px auto;
-  border: 5px solid rgb(137,201,250);
+  border: 5px solid rgb(124, 175, 194);
   max-width: 100%;
 }
 

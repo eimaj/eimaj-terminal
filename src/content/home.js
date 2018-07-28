@@ -6,7 +6,7 @@ export default {
 
 ---
 
-## Here are some fun things I've built
+## Here are some fun things I've built.
 
 * <a href="http://alphabet.eimaj.net" target="_">Speak & Spell</a>
 * <a href="http://mastermind.eimaj.net" target="_">Mastermind.js</a>`

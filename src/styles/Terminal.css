@@ -4,9 +4,9 @@
   padding: 0;
   box-sizing: border-box;
   min-height: 100%;
-  background-color: black;
+  background-color: rgb(24, 24, 24);
   line-height: 24px;
   font-family: monospace;
   font-size: 18px;
-  color: whitesmoke;
+  color: rgb(216, 216, 216);
 }

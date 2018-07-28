@@ -10,7 +10,7 @@
   position: relative;
   box-sizing: border-box;
   background-clip: padding-box;
-  background: #000;
+  background: rgb(24, 24, 24);
   z-index: 1;
 }
 
@@ -40,6 +40,6 @@
   margin: 8px auto;
   width: 20px;
   height: 2px;
-  border-top: 2px solid whitesmoke;
-  border-bottom: 2px solid whitesmoke;
+  border-top: 2px solid rgb(216, 216, 216);
+  border-bottom: 2px solid rgb(216, 216, 216);
 }
