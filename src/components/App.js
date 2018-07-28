@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import SplitPane from 'react-split-pane';
+
 import Content from './Content';
+import ResizeToggle from './ResizeToggle';
 import Terminal from './Terminal';
 
 import '../styles/App.css';
@@ -8,10 +10,21 @@ import '../styles/App.css';
 class App extends Component {
   state = {
     markdownPage: 'home',
+    currentSize: '80%',
+    maxContentSize: 800,
+  };
+
+  componentDidMount() {
+    const windowSize = this.splitPanelNode.offsetHeight;
+    return this.setState({ maxContentSize: windowSize });
   };
 
   setPage = (markdownPage) => {
     return this.setState({ markdownPage });
+  };
+
+  toggleContentSize = (newSize = '80%') => {
+    return this.setState({ currentSize: newSize });
   };
 
   render() {
@@ -31,6 +44,10 @@ class App extends Component {
           <Terminal setPage={this.setPage} />
         </SplitPane>
 
+        <ResizeToggle
+          toggleContentSize={this.toggleContentSize}
+          maxContentSize={this.state.maxContentSize}
+        />
       </div>
     );
   }
