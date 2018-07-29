@@ -17,6 +17,18 @@ const Content = (ChildComponent) => ({ size }) => {
       <Header />
       <div className="Content__box">
         <ChildComponent />
+
+        <p className="Content__foot">
+          Built with <a
+            href="https://github.com/facebook/create-react-app"
+            target="_"
+          >Create React App</a>. Source on <a
+            href="https://github.com/eimaj/eimaj-terminal"
+            target="_"
+          >
+            GitHub
+          </a>.
+      </p>
       </div>
     </div>
   )
