@@ -1,6 +1,10 @@
 .App {
 }
 
+.App__content {
+  width: 100%;
+}
+
 .Pane {
   overflow: auto;
 }
