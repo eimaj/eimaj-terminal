@@ -1,36 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Markdown from 'markdown-to-jsx';
 
 import Header from './Header';
-import Icons from './Icons';
 
-import pages from '../content/index';
 import '../styles/Content.css';
 
-const Content = ({ page }) => {
-  const { classNames, content } = pages[page];
+const Content = (ChildComponent) => ({ size }) => {
+  const classNames = ['Content'];
+
+  if (!!size) {
+    classNames.push(`Content--${size}`);
+  }
 
   return (
-    <div className={['Content', classNames].join(' ')}>
+    <div className={classNames.join(' ')}>
       <Header />
       <div className="Content__box">
-        <Markdown>
-          {content}
-        </Markdown>
-        <hr />
-        <Icons />
+        <ChildComponent />
       </div>
     </div>
   )
 };
 
 Content.defaultProps = {
-  page: '',
+  size: '',
 };
 
 Content.propTypes = {
-  page: PropTypes.string,
+  size: PropTypes.string,
 };
 
 export default Content;
