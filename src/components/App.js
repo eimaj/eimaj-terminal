@@ -22,12 +22,6 @@ class App extends Component {
     return this.setState({ maxContentSize: windowSize });
   };
 
-  routeToPage = () => {
-    // this.props.history.push('/some/path')
-    console.log(this);
-    return false;
-  };
-
   toggleContentSize = (newSize = '80%') => {
     return this.setState({ currentSize: newSize });
   };
