@@ -1,6 +1,8 @@
-# Eimaj CLI
+# eimaj::terminal
 
-A CLI website. Commands return pages of text.
+A spin on my website that can be navigated by a (fake) terminal.
+
+You can check it out [here](http://eimaj.net).
 
 ---
 
