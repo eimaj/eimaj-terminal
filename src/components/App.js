@@ -49,7 +49,7 @@ class App extends Component {
               <Route path="/cv" render={() => (<Resume size="wide" />)} />
             </div>
 
-            <Terminal routeToPage={this.routeToPage} />
+            <Route path="*" component={Terminal} />
           </SplitPane>
         </Router>
 
