@@ -10,6 +10,11 @@ const ResizeToggle = ({ toggleContentSize, maxContentSize }) => {
     return toggleContentSize(24);
   };
 
+  const splitTerminalAndContent = (e) => {
+    e.preventDefault();
+    return toggleContentSize('50%');
+  };
+
   const minimizeTerminal = (e) => {
     e.preventDefault();
     return toggleContentSize(maxContentSize - 24);
