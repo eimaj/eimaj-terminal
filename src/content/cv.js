@@ -2,7 +2,7 @@ import jammin from '../images/jammin.jpg';
 
 export default {
   classNames: 'Content--wide',
-  content: `# Jamie Allen
+  content: `# **Jamie Allen**<br /> Senior Software Developer
 
 ## Qualifications
 
