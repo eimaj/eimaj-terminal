@@ -6,57 +6,43 @@
 }
 
 .ResizeToggle__link {
+  transition: all .3s ease;
   position: relative;
   display: inline-block;
-  margin-left: 4px;
-  border: 2px solid black;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  margin: 4px;
+  border: 2px solid rgba(216, 216, 216, .2);
+  width: 20px;
+  height: 16px;
+  background-color: rgb(216, 216, 216);
   font-size: 0;
-  background-color: white;
 }
 
-.ResizeToggle__link--minimize {
-  transform: rotate(180deg);
+.ResizeToggle__link:hover {
+  border-color: rgba(161, 181, 108, .2);
+  background-color: rgb(161, 181, 108);
 }
 
 .ResizeToggle__icon {
   position: absolute;
-  top: 16px;
-  left: 10px;
-  font-size: 0;
-  height: 2px;
-  width: 10px;
-  z-index: 10;
-}
-
-.ResizeToggle__icon::before,
-.ResizeToggle__icon::after {
-  position: absolute;
-  display: block;
-  width: 9px;
-  height: 100%;
-  background-color: rgb(24, 24, 24);
-  content: '';
-}
-
-.ResizeToggle__icon::before {
-  bottom: 0;
-  transform: rotate(-45deg);
-  transform-origin: bottom left;
+  top: 0;
   left: 0;
-}
-
-.ResizeToggle__icon::after {
-  bottom: 0;
-  transform: rotate(45deg);
-  transform-origin: bottom right;
-  right: 0;
+  font-size: 0;
+  height: 16px;
+  width: 20px;
+  z-index: 10;
+  border: 2px solid rgb(24, 24, 24);
+  border-bottom-width: 8px;
+  box-sizing: border-box;
 }
 
 .ResizeToggle__icon--maximize {
+  border-bottom-width: 12px;
+}
+
+.ResizeToggle__icon--split {
+  border-bottom-width: 8px;
 }
 
 .ResizeToggle__icon--minimize {
+  border-bottom-width: 4px;
 }
