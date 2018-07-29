@@ -25,7 +25,7 @@ class Terminal extends Component {
 
   executeCommand = (command) => {
     // TODO: Move this out and handle terminal commands externally.
-    const availablePages = ['home', 'cv'];
+    const availablePages = ['home', 'cv', 'pixel'];
     let result = `Eimaj Command Line Interface
 
 Usage:

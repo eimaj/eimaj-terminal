@@ -20,7 +20,7 @@
 .Content__box img {
   box-sizing: border-box;
   margin: 20px auto;
-  border: 5px solid rgb(124, 175, 194);
+  /* border: 5px solid rgb(124, 175, 194); */
   max-width: 100%;
 }
 

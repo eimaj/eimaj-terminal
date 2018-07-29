@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 import SplitPane from 'react-split-pane';
 
-import Home from './content/Home';
-import Resume from './content/Resume';
 import ResizeToggle from './ResizeToggle';
 import Terminal from './Terminal';
+
+import Home from './content/Home';
+import Resume from './content/Resume';
+import PixelCards from './content/PixelCards';
 
 import '../styles/App.css';
 
@@ -47,6 +49,7 @@ class App extends Component {
             <div className="App__content  a">
               <Route exact path="/" component={Home} />
               <Route path="/cv" render={() => (<Resume size="wide" />)} />
+              <Route path="/pixel" render={() => (<PixelCards size="wide" />)} />
             </div>
 
             <Route path="*" component={Terminal} />
