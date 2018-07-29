@@ -3,7 +3,7 @@
   margin: 0 8px;
 }
 
-.Icon::before {
+.Content--wide .Content__box .Icon::before {
   padding: 0;
   content: '';
 }
