@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 import SplitPane from 'react-split-pane';
 
-import Content from './Content';
+import Home from './content/Home';
+import Resume from './content/Resume';
 import ResizeToggle from './ResizeToggle';
 import Terminal from './Terminal';
 
@@ -9,7 +11,6 @@ import '../styles/App.css';
 
 class App extends Component {
   state = {
-    markdownPage: 'home',
     currentSize: '80%',
     maxContentSize: 800,
   };
@@ -19,8 +20,10 @@ class App extends Component {
     return this.setState({ maxContentSize: windowSize });
   };
 
-  setPage = (markdownPage) => {
-    return this.setState({ markdownPage });
+  routeToPage = () => {
+    // this.props.history.push('/some/path')
+    console.log(this);
+    return false;
   };
 
   toggleContentSize = (newSize = '80%') => {
@@ -33,16 +36,22 @@ class App extends Component {
         style={{ height: '100vh' }}
         ref={node => (this.splitPanelNode = node)}
       >
-        <SplitPane
-          className="App"
-          split="horizontal"
-          minSize={10}
-          maxSize={-24}
-          size={this.state.currentSize}
-        >
-          <Content page={this.state.markdownPage} />
-          <Terminal setPage={this.setPage} />
-        </SplitPane>
+        <Router>
+          <SplitPane
+            className="App"
+            split="horizontal"
+            minSize={10}
+            maxSize={-24}
+            size={this.state.currentSize}
+          >
+            <div className="App__content  a">
+              <Route exact path="/" component={Home} />
+              <Route path="/cv" render={() => (<Resume size="wide" />)} />
+            </div>
+
+            <Terminal routeToPage={this.routeToPage} />
+          </SplitPane>
+        </Router>
 
         <ResizeToggle
           toggleContentSize={this.toggleContentSize}
