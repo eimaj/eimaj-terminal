@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 import CommandLine from './CommandLine';
 import History from './History';
-import pages from '../content/index';
 
 import '../styles/Terminal.css';
 
 class Terminal extends Component {
-  static propTypes = {
-    setPage: PropTypes.func.isRequired,
-  };
-
   state = {
     history: [],
   };
@@ -21,15 +15,17 @@ class Terminal extends Component {
   };
 
   recordHistory = (command, result) => {
-    const history = [...this.state.history];
     const dateTime = new Date();
+    const history = [...this.state.history];
 
+    // Update Terminal history:
     history.push({ command, result, dateTime });
     return this.setState({ history }, this.scrollToBottom);
   };
 
   executeCommand = (command) => {
-    const availablePages = Object.keys(pages);
+    // TODO: Move this out and handle terminal commands externally.
+    const availablePages = ['home', 'cv'];
     let result = `Eimaj Command Line Interface
 
 Usage:
@@ -38,8 +34,14 @@ Usage:
     Available pages: [${availablePages.map((page) => page).join(', ')}]`
 
     if (availablePages.includes(command)) {
-      this.props.setPage(command);
       result = `Rendering ${command}`
+
+      // Update content via react-router/history:
+      if (command === 'home') {
+        this.props.history.push('/');
+      } else {
+        this.props.history.push(`/${command}`);
+      }
     }
 
     return this.recordHistory(command, result);
