@@ -4,11 +4,13 @@ import PropTypes from 'prop-types';
 import Caret from './Caret';
 import TimeStamp from './TimeStamp';
 
+import executeCommand from '../helpers/executeCommand';
+
 import '../styles/CommandLine.css';
 
 class CommandLine extends Component {
   static propTypes = {
-    executeCommand: PropTypes.func.isRequired,
+    recordHistory: PropTypes.func.isRequired,
   };
 
   state = {
@@ -49,10 +51,16 @@ class CommandLine extends Component {
     return this.setState({ inputValue }, this.setCaretValue);
   };
 
+  handleCommand = (command) => {
+    const response = executeCommand(command);
+
+    return this.props.recordHistory(command, response);
+  };
+
   handleSubmit = (event) => {
     event.preventDefault();
 
-    this.props.executeCommand(this.state.inputValue);
+    this.handleCommand(this.state.inputValue);
     return this.clearInputValueAndCaret();
   };
 
