@@ -11,7 +11,6 @@ const commands = {
   help,
 };
 
-
 /**
  * commandKeys - An Array of keys from the commands Object. Used for
  * determining if a command is available.
