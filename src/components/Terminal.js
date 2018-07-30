@@ -14,36 +14,18 @@ class Terminal extends Component {
     this.terminalNode.parentNode.scrollTop = this.terminalNode.parentNode.scrollHeight;
   };
 
-  recordHistory = (command, result) => {
+  recordHistory = (command, output) => {
     const dateTime = new Date();
     const history = [...this.state.history];
 
-    // Update Terminal history:
-    history.push({ command, result, dateTime });
-    return this.setState({ history }, this.scrollToBottom);
-  };
-
-  executeCommand = (command) => {
-    // TODO: Move this out and handle terminal commands externally.
-    const availablePages = ['home', 'cv', 'pixel'];
-    let result = `Eimaj Command Line Interface
-
-Usage:
-
-  Render page content, available pages: [${availablePages.map((page) => page).join(', ')}]`
-
-    if (availablePages.includes(command)) {
-      result = `Rendering ${command}`
-
-      // Update content via react-router/history:
-      if (command === 'home') {
-        this.props.history.push('/');
-      } else {
-        this.props.history.push(`/${command}`);
-      }
+    // Update Content via react-router/history:
+    if (!!output.render) {
+      this.props.history.push(output.render);
     }
 
-    return this.recordHistory(command, result);
+    // Update Terminal history:
+    history.push({ command, result: output.message, dateTime });
+    return this.setState({ history }, this.scrollToBottom);
   };
 
   focusOnClick = () => {
@@ -61,7 +43,7 @@ Usage:
       >
         <History history={this.state.history} />
         <CommandLine
-          executeCommand={this.executeCommand}
+          recordHistory={this.recordHistory}
           ref={node => (this.commandLineNode = node)}
         />
       </div>
