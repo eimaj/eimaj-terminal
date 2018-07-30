@@ -1,5 +1,6 @@
 import React from 'react';
 
+import resume from '../files/jamie-allen_resume.pdf';
 import Icon from './Icon';
 
 import '../styles/Icons.css';
@@ -33,7 +34,7 @@ const Icons = () => (
     <Icon
       name="resume"
       title="Download Resume as PDF"
-      url="./jamie-allen_resume.pdf"
+      url={resume}
     />
   </ul>
 );
