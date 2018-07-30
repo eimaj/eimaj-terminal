@@ -38,7 +38,7 @@ export const helpFlags = ['--help', '-h'];
  */
 const help = () => {
   return {
-    message: `Eimaj CLI, v1.0. A fun way to intereact with my website.
+    message: `Eimaj CLI, v1.1. A fun way to intereact with my website.
 
 Available commands:
 
