@@ -1,4 +1,4 @@
-@import 'http://fonts.googleapis.com/css?family=Lato:300,400,700';
+@import 'http://fonts.googleapis.com/css?family=Lato:300,400,600';
 
 body {
   margin: 0;
@@ -93,7 +93,7 @@ small {
 
 strong {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, serif;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 em {
