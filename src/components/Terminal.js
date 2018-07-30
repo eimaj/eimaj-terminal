@@ -30,8 +30,7 @@ class Terminal extends Component {
 
 Usage:
 
-  render        Renders page content.
-    Available pages: [${availablePages.map((page) => page).join(', ')}]`
+  Render page content, available pages: [${availablePages.map((page) => page).join(', ')}]`
 
     if (availablePages.includes(command)) {
       result = `Rendering ${command}`
