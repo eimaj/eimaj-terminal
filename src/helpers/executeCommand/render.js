@@ -1,19 +1,42 @@
-// Valid payload:
+import { helpResponses, helpFlags } from './help';
+
+
+/**
+ * pages - An Array of available pages to render.
+ *
+ * @return {Array}
+ */
 const pages = ['home', 'cv', 'pixel'];
-const help = ['--help', '-h'];
 
-// Canned responses:
+
+/**
+ * notFoundResponse - Returns a message for Page Not Found (404) error.
+ *
+ * @return {Object}   Contains only { message: String }
+ */
 const notFoundResponse = {
-  message: `Page not found, available pages include: [${pages.map((page) => page).join(', ')}]`
-};
-const helpResponse = { message: `Usage: render [page]
-  Renders requested page content.
-
-  Available pages:
-${pages.map(page => (`    ${page}
-`)).join('')}`
+  message: '404: Page not found, try `render --help` for help.'
 };
 
+
+/**
+ * helpResponse - Returns the help message for the render command.
+ *
+ * @return {Object}   Contains only { message: String }
+ */
+const helpResponse = {
+  message: `${helpResponses.render}
+        Available pages:
+${pages.map(page => (`            ${page}
+`)).join('')}`,
+};
+
+/**
+ * renderPage - Creates a response for a page if the page is valid.
+ *
+ * @param  {String}  payload   The page requested by the user.
+ * @return {Object}            The response Object.
+ */
 const renderPage = (payload) => {
   if (!pages.includes(payload)) { return {}; }
 
@@ -29,6 +52,13 @@ const renderPage = (payload) => {
   return response;
 };
 
+/**
+ * render - Handles the render action submitted by the user. Include page rendering
+ * and the help command for render.
+ *
+ * @param  {String}  payload   The page requested by the user, default: ''
+ * @return {Object}            The response Object.
+ */
 const render = (payload = '') => {
   const pageResponse = renderPage(payload);
 
@@ -36,7 +66,7 @@ const render = (payload = '') => {
     return pageResponse;
   }
 
-  if (help.includes(payload)) {
+  if (helpFlags.includes(payload)) {
     return helpResponse;
   }
 
