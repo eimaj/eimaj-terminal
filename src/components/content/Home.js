@@ -13,7 +13,7 @@ const Home = () => (
       I am a <Link to="/cv">Senior Software Developer</Link> working my craft in Hamilton (Canada).
     </p>
     <p>
-      I also <a href="https://society6.com/eimaj" target="_">paint</a> and [design]() things.
+      I also <a href="https://society6.com/eimaj" target="_">paint</a> and <Link to="/pixel">design</Link> things.
     </p>
 
     <hr />
