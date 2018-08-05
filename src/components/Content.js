@@ -22,7 +22,7 @@ const Content = (ChildComponent) => ({ size }) => {
           Built with <a
             href="https://github.com/facebook/create-react-app"
             target="_"
-          >Create React App</a>. Source on <a
+          >React</a>. Source on <a
             href="https://github.com/eimaj/eimaj-terminal"
             target="_"
           >
