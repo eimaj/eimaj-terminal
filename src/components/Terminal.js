@@ -28,6 +28,11 @@ class Terminal extends Component {
       this.props.history.push(output.render);
     }
 
+    // TODO: Side Effect => Update Content/Terminal pane size:
+    if (!!output.terminalSize) {
+      return this.props.toggleContentSize(output.terminalSize);
+    }
+
     // Update Terminal history:
     history.push({ command, result: output.message, dateTime });
     return this.setState({ history }, this.scrollToBottom);
