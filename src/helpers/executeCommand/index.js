@@ -1,3 +1,4 @@
+import { resizeCommands } from '../resizeContent';
 import help from './help';
 import print from './print';
 import render from './render';
@@ -11,6 +12,7 @@ const commands = {
   help,
   print,
   render,
+  ...resizeCommands,
 };
 
 /**
