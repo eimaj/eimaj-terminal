@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import CommandLine from './CommandLine';
 import History from './History';
@@ -6,6 +7,10 @@ import History from './History';
 import '../styles/Terminal.css';
 
 class Terminal extends Component {
+  static propTypes = {
+    toggleContentSize: PropTypes.func.isRequired,
+  };
+
   state = {
     history: [],
   };
