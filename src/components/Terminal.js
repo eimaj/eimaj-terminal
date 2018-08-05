@@ -15,15 +15,26 @@ class Terminal extends Component {
     history: [],
   };
 
+  /**
+   * scrollToBottom - Scrolls the Terminal to the bottom so that the focus is on the active caret.
+   */
   scrollToBottom = () => {
     this.terminalNode.parentNode.scrollTop = this.terminalNode.parentNode.scrollHeight;
   };
 
+  /**
+   * recordHistory - Logs the command and output into the history Array. If output contains
+   * `render` react-router history will also be updated.
+   *
+   * @param {String} command  The command that the user ran
+   * @param {Object} output   The response returned from executeCommand(command)
+   * @return                  Updates the state and on completion, triggers this.scrollToBottom()
+   */
   recordHistory = (command, output) => {
     const dateTime = new Date();
     const history = [...this.state.history];
 
-    // Update Content via react-router/history:
+    // TODO: Side Effect => Update Content via react-router/history:
     if (!!output.render) {
       this.props.history.push(output.render);
     }
@@ -38,6 +49,9 @@ class Terminal extends Component {
     return this.setState({ history }, this.scrollToBottom);
   };
 
+  /**
+   * focusOnClick - Sets focus() on the CommandLine input when Terminal component is clicked.
+   */
   focusOnClick = () => {
     this.scrollToBottom();
 
