@@ -28,5 +28,5 @@
   line-height: 24px;
   font-family: monospace;
   font-size: .9rem;
-  white-space: pre-line;
+  white-space: pre-wrap;
 }
