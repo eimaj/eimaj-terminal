@@ -18,9 +18,12 @@ const ResizeToggle = ({ toggleContentSize }) => {
     return toggleContentSize(minContentValue);
   };
 
+  /**
+  * splitTerminalAndContent - Returns toggleContentSize() with the splitValue() as param.
+  */
   const splitTerminalAndContent = (e) => {
     e.preventDefault();
-    return toggleContentSize('50%');
+    return toggleContentSize(splitValue);
   };
 
   const minimizeTerminal = (e) => {
