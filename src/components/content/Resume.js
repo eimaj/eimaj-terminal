@@ -3,7 +3,7 @@ import React from 'react';
 import ContentHOC from '../Content';
 import MarkdownContent from '../MarkdownContent';
 
-import markdown from './resume.md';
+import markdown from '../../content/resume.md';
 
 const Content = () => (
   <MarkdownContent markdown={markdown} iconsAbove={true} />
