@@ -1,13 +1,13 @@
 import { helpFlags } from './help';
 import fourOhFour from './error/fourOhFour';
+import markdown from '../../content';
 
 /**
  * pages - An Array of available pages to render.
  *
  * @return {Array}
  */
-const pages = ['home', 'cv', 'pixel'];
-
+const pages = Object.keys(markdown);
 
 /**
  * renderHelp - The help message for the `render` command.
