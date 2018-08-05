@@ -26,9 +26,12 @@ const ResizeToggle = ({ toggleContentSize }) => {
     return toggleContentSize(splitValue);
   };
 
+  /**
+  * minimizeTerminal - Returns toggleContentSize() with the maxContentValue() as param.
+  */
   const minimizeTerminal = (e) => {
     e.preventDefault();
-    return toggleContentSize(maxContentSize - 24);
+    return toggleContentSize(maxContentValue);
   };
 
   return (
