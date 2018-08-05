@@ -1,14 +1,6 @@
 import version from '../../version';
 
-/**
- * renderMessage - The help message for the `render` command.
- *
- * @return {String}
- */
-const renderMessage = `render  Renders requested page content.
-        Usage:  render [page]
-        Options:
-            -h, --help    Prints help for render`;
+import { renderHelp } from './render';
 
 /**
  * helpMessage - The help message for the `help` command.
@@ -17,16 +9,6 @@ const renderMessage = `render  Renders requested page content.
  */
 const helpMessage = `help    Prints this helpful text.
         Usage:  help`;
-
-/**
- * helpResponses (export) - A compiled Object of all available command help messages.
- *
- * @return {Object}
- */
-export const helpResponses = {
-  render: renderMessage,
-  help: helpMessage,
-}
 
 /**
  * helpFlags (export) - A list of flags for commands that can trigger a help message.
@@ -44,7 +26,7 @@ const help = () => {
 
 Available commands:
 
-${renderMessage}
+${renderHelp}
 ${helpMessage}`
   };
 };
