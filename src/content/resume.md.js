@@ -1,4 +1,4 @@
-import jammin from '../../images/jammin.jpg';
+import jammin from '../images/jammin.jpg';
 
 export default `# **Jamie Allen**<br /> Senior Software Developer
 

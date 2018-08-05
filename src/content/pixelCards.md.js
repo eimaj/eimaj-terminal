@@ -1,4 +1,4 @@
-import pixelPreview from '../../images/pixel-preview.png';
+import pixelPreview from '../images/pixel-preview.png';
 
 export default `# Pixel Playing Cards
 
