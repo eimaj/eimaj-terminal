@@ -1,5 +1,6 @@
-import render from './render';
 import help from './help';
+import print from './print';
+import render from './render';
 
 /**
  * commands: A compiled Object of imported commands.
@@ -7,8 +8,9 @@ import help from './help';
  * @return {Object}
  */
 const commands = {
-  render,
   help,
+  print,
+  render,
 };
 
 /**
@@ -21,7 +23,6 @@ const commandKeys = Object.keys(commands)
  * notFoundResponse - The default response when a command is not found.
  */
 const notFoundResponse = { message: 'Command not found' };
-
 
 /**
  * execute - Parses the command submitted by the user and returns a response Object.
