@@ -1,5 +1,6 @@
 import { helpResponses, helpFlags } from './help';
 
+import fourOhFour from './error/fourOhFour';
 
 /**
  * pages - An Array of available pages to render.
@@ -10,14 +11,8 @@ const pages = ['home', 'cv', 'pixel'];
 
 
 /**
- * notFoundResponse - Returns a message for Page Not Found (404) error.
  *
- * @return {Object}   Contains only { message: String }
  */
-const notFoundResponse = {
-  message: '404: Page not found, try `render --help` for help.'
-};
-
 
 /**
  * helpResponse - Returns the help message for the render command.
@@ -70,7 +65,7 @@ const render = (payload = '') => {
     return helpResponse;
   }
 
-  return notFoundResponse;
+  return fourOhFour('render');
 };
 
 export default render;
