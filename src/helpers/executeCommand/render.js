@@ -1,5 +1,4 @@
-import { helpResponses, helpFlags } from './help';
-
+import { helpFlags } from './help';
 import fourOhFour from './error/fourOhFour';
 
 /**
@@ -11,8 +10,14 @@ const pages = ['home', 'cv', 'pixel'];
 
 
 /**
+ * renderHelp - The help message for the `render` command.
  *
+ * @return {String}
  */
+export const renderHelp = `render  Renders requested page content.
+        Usage:  render [page]
+        Options:
+            -h, --help    Prints help for render`;
 
 /**
  * helpResponse - Returns the help message for the render command.
@@ -20,7 +25,7 @@ const pages = ['home', 'cv', 'pixel'];
  * @return {Object}   Contains only { message: String }
  */
 const helpResponse = {
-  message: `${helpResponses.render}
+  message: `${renderHelp}
         Available pages:
 ${pages.map(page => (`            ${page}
 `)).join('')}`,
