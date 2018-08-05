@@ -22,8 +22,16 @@ class App extends Component {
     return this.setState({ maxContentSize: windowSize });
   };
 
-  toggleContentSize = (newSize = '80%') => {
-    return this.setState({ currentSize: newSize });
+  /**
+   * toggleContentSize - Sets state with newSize, can be percent or number.
+   *
+   * @param  {Function} newSize  Returns the updated currentSize based on maxContentSize
+   * @return                     Sets state.currentSize to newSize with setState()
+   */
+  toggleContentSize = (newSize) => {
+    return this.setState({
+      currentSize: newSize(this.state.maxContentSize),
+    });
   };
 
   render() {
