@@ -1,4 +1,3 @@
-
 /**
  * minContentSize - The minimum size the Content and Terminal component Panes can be.
  */
@@ -62,3 +61,19 @@ export const resizeCommands = {
 
   split,
 };
+
+/**
+ * resizeHelp - The help message for the resize commands.
+ *
+ * @return {String}
+ */
+export const resizeHelp = `max     Maximizes the terminal pane.
+        Usage:  max
+                maximize
+
+min     Minimizes the terminal pane.
+        Usage:  min
+                minimize
+                
+split   Splits the terminal and content panes.
+        Usage:  split`;
