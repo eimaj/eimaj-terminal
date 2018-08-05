@@ -71,10 +71,7 @@ class App extends Component {
           </SplitPane>
         </Router>
 
-        <ResizeToggle
-          toggleContentSize={this.toggleContentSize}
-          maxContentSize={this.state.maxContentSize}
-        />
+        <ResizeToggle toggleContentSize={this.toggleContentSize} />
       </div>
     );
   }
