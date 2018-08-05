@@ -104,7 +104,7 @@ class CommandLine extends Component {
             isFocus={this.state.isFocus}
             caretPosition={this.state.caretPosition}
           />
-      </form>
+        </form>
       </div>
     )
   }
