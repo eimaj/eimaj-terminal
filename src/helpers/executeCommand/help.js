@@ -1,5 +1,6 @@
 import version from '../../version';
 
+import { resizeHelp } from '../resizeContent';
 import { printHelp } from './print';
 import { renderHelp } from './render';
 
@@ -28,7 +29,11 @@ const help = () => {
 Available commands:
 
 ${renderHelp}
+
 ${printHelp}
+
+${resizeHelp}
+
 ${helpMessage}`
   };
 };
