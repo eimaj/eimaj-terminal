@@ -74,7 +74,6 @@ const ResizeToggle = ({ toggleContentSize }) => {
 
 ResizeToggle.propTypes = {
   toggleContentSize: PropTypes.func.isRequired,
-  maxContentSize: PropTypes.number.isRequired,
 };
 
 export default ResizeToggle;
