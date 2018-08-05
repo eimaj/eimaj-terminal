@@ -1,10 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import {
+  maxContentValue,
+  splitValue,
+  minContentValue,
+} from '../helpers/resizeContent';
+
 import '../styles/ResizeToggle.css';
 
-const ResizeToggle = ({ toggleContentSize, maxContentSize }) => {
-
+const ResizeToggle = ({ toggleContentSize }) => {
   const maximizeTerminal = (e) => {
     e.preventDefault();
     return toggleContentSize(24);
