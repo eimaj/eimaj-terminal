@@ -10,9 +10,12 @@ import {
 import '../styles/ResizeToggle.css';
 
 const ResizeToggle = ({ toggleContentSize }) => {
+  /**
+   * maximizeTerminal - Returns toggleContentSize() with the minContentValue() as param.
+   */
   const maximizeTerminal = (e) => {
     e.preventDefault();
-    return toggleContentSize(24);
+    return toggleContentSize(minContentValue);
   };
 
   const splitTerminalAndContent = (e) => {
