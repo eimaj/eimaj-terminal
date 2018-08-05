@@ -34,6 +34,19 @@ class App extends Component {
     });
   };
 
+  /**
+   * TerminalWithProps - Includes the toggleContentSize as a prop to Terminal for use with Route.
+   *
+   * @param {Object} props   The props passed to Terminal via Route
+   * @return                 The Terminal component with toggleContentSize included as a prop
+   */
+  TerminalWithProps = (props) => (
+    <Terminal
+      toggleContentSize={this.toggleContentSize}
+      {...props}
+    />
+  );
+
   render() {
     return (
       <div
@@ -54,7 +67,7 @@ class App extends Component {
               <Route path="/pixel" render={() => (<PixelCards size="wide" />)} />
             </div>
 
-            <Route path="*" component={Terminal} />
+            <Route path="*" component={this.TerminalWithProps} />
           </SplitPane>
         </Router>
 
