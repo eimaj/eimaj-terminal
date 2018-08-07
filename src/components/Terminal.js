@@ -27,7 +27,7 @@ class Terminal extends Component {
    * `render` react-router history will also be updated.
    *
    * @param {String} command  The command that the user ran
-   * @param {Object} output   The response returned from executeCommand(command)
+   * @param {Object} output   The response returned from terminal(command)
    * @return                  Updates the state and on completion, triggers this.scrollToBottom()
    */
   recordHistory = (command, output) => {

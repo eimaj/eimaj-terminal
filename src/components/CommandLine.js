@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Caret from './Caret';
 import TimeStamp from './TimeStamp';
 
-import executeCommand from '../helpers/executeCommand';
+import terminal from '../helpers/terminal';
 
 import '../styles/CommandLine.css';
 
@@ -52,7 +52,7 @@ class CommandLine extends Component {
   };
 
   handleCommand = (command) => {
-    const response = executeCommand(command);
+    const response = terminal(command);
 
     return this.props.recordHistory(command, response);
   };
