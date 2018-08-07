@@ -1,23 +1,23 @@
 import { helpFlags } from './help';
-import fourOhFour from './error/fourOhFour';
 import markdown from '../../content';
+import fourOhFour from '../errors/fourOhFour';
 
 /**
- * pages - An Array of available pages to render.
+ * pages - An Array of available pages to print.
  *
  * @return {Array}
  */
 const pages = Object.keys(markdown);
 
 /**
- * renderHelp - The help message for the `render` command.
+ * printHelp - The help message for the `print` command.
  *
  * @return {String}
  */
-export const renderHelp = `render  Renders requested page content.
-        Usage:  render [page]
+export const printHelp = `print   Prints requested page content in the console.
+        Usage:  print [page]
         Options:
-            -h, --help    Prints help for render`;
+            -h, --help    Prints help for print`;
 
 /**
  * helpResponse - Returns the help message for the render command.
@@ -25,31 +25,24 @@ export const renderHelp = `render  Renders requested page content.
  * @return {Object}   Contains only { message: String }
  */
 const helpResponse = {
-  message: `${renderHelp}
+  message: `${printHelp}
         Available pages:
 ${pages.map(page => (`            ${page}
 `)).join('')}`,
 };
 
 /**
- * renderPage - Creates a response for a page if the page is valid.
+ * printPage - Creates a response for a page if the page is valid.
  *
  * @param  {String}  payload   The page requested by the user.
  * @return {Object}            The response Object.
  */
-const renderPage = (payload) => {
+const printPage = (payload) => {
   if (!pages.includes(payload)) { return {}; }
 
-  const response = {};
-
-  response['render'] = `/${payload}`;
-  response['message'] = `Rendering ${payload}`;
-
-  if (payload === 'home') {
-    response['render'] = '/';
-  }
-
-  return response;
+  return {
+    message: markdown[payload],
+  };
 };
 
 /**
@@ -59,8 +52,8 @@ const renderPage = (payload) => {
  * @param  {String}  payload   The page requested by the user, default: ''
  * @return {Object}            The response Object.
  */
-const render = (payload = '') => {
-  const pageResponse = renderPage(payload);
+const print = (payload = '') => {
+  const pageResponse = printPage(payload);
 
   if (Object.keys(pageResponse).length > 0) {
     return pageResponse;
@@ -70,7 +63,7 @@ const render = (payload = '') => {
     return helpResponse;
   }
 
-  return fourOhFour('render');
+  return fourOhFour('print');
 };
 
-export default render;
+export default print;
