@@ -8,7 +8,7 @@ const TimeStamp = ({ dateTime }) => {
   return (
     <span className="Timestamp">
       {moment(dateTime).format("HH:mm")}
-      &nbsp;&raquo;&nbsp;
+      &nbsp;
     </span>
   )
 };

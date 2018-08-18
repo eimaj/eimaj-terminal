@@ -13,8 +13,8 @@
   margin: 0;
   padding: 0;
   line-height: 24px;
-  font-family: monospace;
-  font-size: .9rem;
+  font-family: 'c64', monospace;
+  font-size: .75rem;
 }
 
 .Item__command {
@@ -26,7 +26,7 @@
   margin: 0;
   padding: 10px 0;
   line-height: 24px;
-  font-family: monospace;
-  font-size: .9rem;
+  font-family: 'c64', monospace;
+  font-size: .75rem;
   white-space: pre-wrap;
 }
