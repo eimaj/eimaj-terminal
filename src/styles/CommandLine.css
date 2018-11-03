@@ -23,7 +23,7 @@
   background-color: transparent;
   color: rgb(161, 181, 108);
   line-height: 24px;
-  font-family: 'c64', monospace;
+  font-family: monospace;
   font-size: .75rem;
   z-index: 10;
   caret-color: transparent;
