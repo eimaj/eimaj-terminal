@@ -23,7 +23,7 @@
   background-color: transparent;
   color: rgb(161, 181, 108);
   line-height: 24px;
-  font-family: monospace;
+  font-family: 'Fira Mono', monospace;
   font-size: .75rem;
   z-index: 10;
   caret-color: transparent;

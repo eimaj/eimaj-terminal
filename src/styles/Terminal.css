@@ -6,7 +6,7 @@
   min-height: 100%;
   background-color: rgb(24, 24, 24);
   line-height: 24px;
-  font-family: monospace;
+  font-family: 'Fira Mono', monospace;
   font-size: .75rem;
   color: rgb(216, 216, 216);
 }
