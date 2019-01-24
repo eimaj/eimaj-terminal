@@ -14,8 +14,13 @@ export default `# **Jamie Allen**<br /> Senior Software Developer
 
 ## Experience
 
+### Weever Apps, Hamilton - Senior Developer
+#### October 2018 - Present
+
+Working with the team to build a product with a focus on UI and building a scalability.
+
 ### Fluid Media Technologies, Hamilton - Senior Software Developer
-#### Sept 2017 - Present
+#### September 2017 - October 2018
 
 Team leader and senior developer on many aspects of the Fluid Media System. With a focus on APIs, architecture and Vue components, we’re working towards building a scalable product that will last for years to come.
 
