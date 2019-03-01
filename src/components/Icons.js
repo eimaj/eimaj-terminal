@@ -17,6 +17,12 @@ const Icons = () => (
       title="GitHub"
       url="https://github.com/eimaj"
     />
+
+    <Icon
+      name="twitter"
+      title="Twitter"
+      url="https://twitter.com/eimaj"
+    />
   </ul>
 );
 
