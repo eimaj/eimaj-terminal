@@ -1,9 +1,9 @@
-import home from './home.md'
-import pixelCard from './pixelCards.md'
-import resume from './resume.md'
+import home from './home.md';
+// import pixelCard from './pixelCards.md'
+import resume from './resume.md';
 
 export default {
   home,
-  pixel: pixelCard,
+  // pixel: pixelCard,
   cv: resume,
 };

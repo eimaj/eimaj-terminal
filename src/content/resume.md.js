@@ -4,13 +4,13 @@ export default `# **Jamie Allen**<br /> Senior Software Developer
 
 ## Qualifications
 
-* Ruby and Rails,
-* Javascript,
-* Node, Yarn, Vue and Vuex, React and Redux, Webpack,
-* HTML5, CSS3 (Sass/SCSS),
-* Git,
+* Javascript, Vue and [JAMstack](https://jamstack.org/),
+* Node, Webpack and Jest,
+* Ruby, Rails and everything in between,
+* Semantic HTML and CSS (Sass/SCSS),
+* ♥ Git,
 * Sketch, Invision, Photoshop, Illustrator,
-* Ubuntu, Nginx, Digital Ocean, AWS, Firebase, Heroku.
+* Ubuntu, Nginx, Netlify, Digital Ocean, AWS, Firebase.
 
 ## Experience
 
