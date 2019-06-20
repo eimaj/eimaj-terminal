@@ -44,7 +44,9 @@ In house web project development, programming and design.
 
 ## Interests
 
-I was an organizer for the HamOnt Conference series in Hamilton and topic leader for HamOnt UX. I've mentored for Ladies Learning Code in Hamilton and I have volunteered for local political issues like public transit and various elections.
+I'm currently a co-organizer for the [#HamOntJS Meetup group](https://www.meetup.com/HamOnt-JavaScript/).
+
+In the past I was an organizer for the HamOnt Conference series in Hamilton and topic leader for HamOnt UX. I've mentored for Ladies Learning Code in Hamilton and I have volunteered for local political issues like public transit and various elections.
 
 Currently most of my spare time is been spent with my family. I also enjoy painting, design, strumming guitars, gardening and sailing when I can find the time.
 
